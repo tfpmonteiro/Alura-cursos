@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+        
+    }
+
+    function sorteia(n){
+    	var numero = Math.round(Math.random() * n);
+    	return numero;
+    }
+
+   
+
+var intervalo = prompt("Qual o intervalo de números para o sistema?");
+numero = sorteia(intervalo);
+console.log(numero);
+var contador = 1;
+
+while(contador < 4){
+    
+    var chute = prompt("Adivinhe o número que o sistema gerou: ");
+
+	if (chute < numero) {
+		alert("Você chutou baixo demais! Tente outra vez ");
+        //chute = prompt("Adivinhe o número que o sistema gerou: ");
+	}else if(chute == numero){
+		alert("PARABÉNS!!! Você acertou");
+        break;
+	} else{
+		alert("Ah não, você chutou muito alto! Tente outra vez");
+       // chute = prompt("Adivinhe o número que o sistema gerou: ");
+	}
+
+    contador++;
+}
+
+   mostra("Por hoje é só pessoal!"); 
+</script>

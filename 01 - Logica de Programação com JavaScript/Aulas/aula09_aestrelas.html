@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(texto) {
+        document.write(texto);
+        //pulaLinha();
+        
+    }
+
+ var qtdadeLinhas = parseInt(prompt("Quantas linhas de estrelas tu quer?"));
+ var qtdadeColunas = parseInt(prompt("E quantas colunas?"));
+
+ for (contador = 1; contador <= qtdadeLinhas; contador++) {
+      for (cont = 1; cont <= qtdadeColunas; cont++){
+        mostra("*");
+      }
+      pulaLinha();
+  } 
+
+   mostra("Cabô"); 
+</script>
