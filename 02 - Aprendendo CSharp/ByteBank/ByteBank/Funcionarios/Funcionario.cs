@@ -16,5 +16,6 @@ namespace ByteBank.Funcionarios
         {
             return Salario * 0.10;
         }
+
     }
 }
