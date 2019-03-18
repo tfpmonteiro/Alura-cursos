@@ -22,6 +22,7 @@ angular.module('alurapic').controller('FotoController', function ($scope, $http,
 
                 $http.put('/v1/fotos/' + $scope.foto._id, $scope.foto)
                     .then(function () {
+                        $scope.formulario.$setPristine();
                         $scope.mensagem = 'Foto "' + $scope.foto.titulo + '" alterada com sucesso';
                     })
                     .catch(function (erro) {
@@ -34,6 +35,7 @@ angular.module('alurapic').controller('FotoController', function ($scope, $http,
                 $http.post('/v1/fotos', $scope.foto)
                     .then(function (foto) {
                         $scope.foto = foto;
+                        $scope.formulario.$setPristine();
                         $scope.mensagem = 'Foto inserida com sucesso!';
                     })
                     .catch(function (erro) {
